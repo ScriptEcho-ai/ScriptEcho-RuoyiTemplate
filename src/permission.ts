@@ -8,6 +8,7 @@ import { usePageLoading } from '@/hooks/web/usePageLoading'
 import { useDictStoreWithOut } from '@/store/modules/dict'
 import { useUserStoreWithOut } from '@/store/modules/user'
 import { usePermissionStoreWithOut } from '@/store/modules/permission'
+import { scriptechoRoutes } from './router/scriptecho'
 
 const { start, done } = useNProgress()
 
@@ -21,6 +22,13 @@ const whiteList = [
   '/register',
   '/oauthLogin/gitee'
 ]
+
+const getRoutePaths = (array: any[]) =>
+  array.forEach((item) => {
+    whiteList.push(item.path)
+    getRoutePaths(item.children || [])
+  })
+getRoutePaths(scriptechoRoutes)
 
 // 路由加载前
 router.beforeEach(async (to, from, next) => {

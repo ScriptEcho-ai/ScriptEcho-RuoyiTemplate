@@ -1,0 +1,9 @@
+{
+  "host": "https://ai.test.haumo.cn:8443", // 访问地址
+  "framework": "vue3",
+  "routeFile": "src/router/scriptecho.js", // 路由文件
+  "codeDir": "src/views", // 代码目录
+  "projectId": "798d27fa242412c9c95e52d8ae8a20ad", // 项目ID，必填
+  "port": "3100", // 端口，不填默认为5173
+  "routerMode": "history" // 路由模式（hash，history）
+}
