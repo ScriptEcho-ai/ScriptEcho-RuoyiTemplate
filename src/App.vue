@@ -20,6 +20,12 @@ const setDefaultTheme = () => {
   appStore.setIsDark(isDarkTheme)
 }
 setDefaultTheme()
+
+onMounted(() => {
+  setTimeout(() => {
+    window.parent?.postMessage({ action: 'on-code-ok' }, '*')
+  }, 5000)
+})
 </script>
 <template>
   <ConfigGlobal :size="currentSize">
