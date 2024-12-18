@@ -18,7 +18,7 @@ yarn install
 - 运行
 
 ```bash
-yarn serve
+yarn server
 ```
 
 - 构建
@@ -35,6 +35,6 @@ yarn build
 
 3. 进入系统设置-菜单管理页面
 
-4. 在 ScriptEcho 菜单下添加子菜单 HelloWolrd ![alt text](image.png)
+4. 在 ScriptEcho 菜单下添加子菜单 HelloWolrd ![alt text](image-1.png)
 
 5. 访问 http://localhost:80/scriptecho/HelloWorld
